@@ -7,7 +7,9 @@ import splashImg from '../images/worldmap.png';
 import compassImg from '../images/compassMap.png';
 import UNHCRImg from '../images/UNHCR.png';
 import fingerPrintImg from '../images/fingerPrintLogo.png';
-// import payment from '../assets/images/payment.png';
+import UNHCRLogoImg from '../images/UNHCR_logo.png';
+import userLogoImg from '../images/users_logo.png';
+import providerLogoImg from '../images/provider_logo.png';
 
 class Home extends Component {
   componentDidMount() {
@@ -24,30 +26,18 @@ class Home extends Component {
         <div className="row">
           <div className="col s12 m12 clean-row">
             <div className="splash-img-section">
-                <img src={splashImg} className="moveFromBottomFade splash-img-block" />
+                <img src={splashImg} className="splash-img-block" />
             </div>
           </div>
         </div>
         
         <div className="row">
-          <div className="col s12 m12 clean-row">
+          <div className="col s12 m12 clean-row" onClick={() => {this.scrollDown()}}>
             <img src={compassImg} className="moveFromTopFade compass-img-block" />
             <img src={UNHCRImg} className="moveFromBottomFade UNHCR-img-block" />
             <img src={fingerPrintImg} className="moveFromBottomFade finger-print-img-block" />
           </div>
-        </div>
-        
-        {/* 
-        <div className="home-intro-text-block">
-          <div className="row">
-            <div className="col s1 m1" />
-            <div className="col s10 m10">
-              <div className="home-intro-text">
-              <div className="home-intro-text-main">GRANT</div>
-              GRANT provides transparency and accountability for public funding. Current funding mechanisms are inefficient, opaque, and centralized. GRANT allows curators to source proposals and fund grants through elastic capital allocation.</div>
-            </div>
-            <div className="col s1 m1" />
-          </div>
+
         </div>
         
         <div className="home-nav-area">
@@ -57,30 +47,30 @@ class Home extends Component {
             <div className="col s10 m10">
               <div className="row">
                 <div className="col s4 m4">
-                  <Link to="/grant">
+                  <Link to="/unhcr">
                   <div className="home-nav-card">
                     <div className="home-nav-box-top" />
-                    <img src={spaceship} className="home-nav-img" />
-                      <div className="home-nav-text">Propose Grant</div>
+                    <img src={UNHCRLogoImg} className="home-nav-img" />
+                      <div className="home-nav-text">UNHCR ID</div>
                   </div>
                   </Link>
                 </div>
                 <div className="col s4 m4">
-                  <Link to="/fund">
+                  <Link to="/user">
                   <div className="home-nav-card">
                     <div className="home-nav-box-top" />
-                    <img src={payment} className="home-nav-img" />
-                    <div className="home-nav-text">Fund Projects</div>
+                    <img src={userLogoImg} className="home-nav-img" />
+                    <div className="home-nav-text">User LogIn</div>
                   </div>
                   </Link>
                 </div>
 
                 <div className="col s4 m4">
-                  <Link to="/feat">
+                  <Link to="/provider">
                   <div className="home-nav-card">
                     <div className="home-nav-box-top" />
-                    <img src={gears} className="home-nav-img" />
-                    <div className="home-nav-text">Feats Dashboard</div>
+                    <img src={providerLogoImg} className="home-nav-img" />
+                    <div className="home-nav-text">Provider LogIn</div>
                   </div>
                   </Link>
                 </div>
@@ -90,7 +80,7 @@ class Home extends Component {
             <div className="col s1 m1" />
 
           </div>
-        </div> */}
+        </div>
 
       </div>
     );
