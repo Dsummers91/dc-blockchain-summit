@@ -8,7 +8,7 @@ Install ganache-cli globally
 ```
 git clone
 npm isntall
-``
+```
 
 
 # Running Test

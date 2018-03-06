@@ -8,9 +8,11 @@ contract('FamilyWallet', function(accounts) {
   })
 
   it("should be able to create a family", async function() {
-    await familyWallet.createFamily('Buterin', [accounts[0], accounts[1]]);
-    let familyOf = await familyWallet.familyOf(accounts[0]);
-    assert.equal(web3.toUtf8(familyOf), 'Buterin');
+    let members = [accounts[0], accounts[1]];
+    await familyWallet.createFamily('Buterin', members);
+    let family = await familyWallet.family('Buterin');
+    assert.deepEqual(family[0], members);
+    assert.equal(family[1], members[0]);
   });
 
 
