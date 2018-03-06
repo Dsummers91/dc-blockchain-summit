@@ -1,9 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import { Switch, Route, Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
+
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  google: {
+    families: ['Montserrat', 'sans-serif']
+  }
+});
+
+import App from './App';
+
+import './css/App.css';
+import './css/home.css';
 
 // CSS font
 import '../node_modules/font-awesome/css/font-awesome.min.css';

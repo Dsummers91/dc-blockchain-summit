@@ -1,0 +1,32 @@
+.splash-img-section {
+    text-align: center;
+    /* margin-top: 1em; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+.splash-img-block {
+    opacity: 0.58;
+    margin-left: -3.65em;
+}
+
+.UNHCR-img-block {
+    position: absolute;
+    width: 22em;
+    top: 8.5%;
+    left: 34%;
+    opacity: 0.95;  
+}
+.compass-img-block {
+    position: absolute;
+    width: 22em;
+    top: 29.4%;
+    left: 34%;
+    opacity: 0.95;
+}
+.finger-print-img-block {
+    position: absolute;
+    width: 22em;
+    top: 64.5%;
+    left: 34%;
+    opacity: 0.95;
+}
