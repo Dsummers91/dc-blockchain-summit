@@ -8,9 +8,6 @@ import Home from './pages/Home';
 import UNHCR from './pages/UNHCR';
 import Phone from './pages/Phone';
 
-import getFamilyWallet from './utils/getFamilyWallet';
-import getGoalTracker from './utils/getGoalTracker';
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -32,14 +29,6 @@ class App extends Component {
   }
 
   componentWillMount() {
-    getFamilyWallet()
-      .then((wallet) => {
-        console.log(wallet);
-      })
-    getGoalTracker()
-      .then((tracker) => {
-        console.log(tracker);
-      })
   }
 
   instantiateContract() {

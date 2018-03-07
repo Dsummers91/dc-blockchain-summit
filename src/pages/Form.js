@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import $ from 'jquery';
 
-import getFamilyWallet from "../utils/getFamilyWallet.js";
+import { createFamilyWallet, getFamily } from "../utils/getFamilyWallet.js";
 
 import personImg from '../images/person.png';
 import fingerPrintImg from '../images/fingerPrint.png';
@@ -12,11 +12,16 @@ import eyeImg from '../images/eye.png';
 class Form extends Component {
     
     submitForm() {
-        getFamilyWallet().then((familyWallet) => {
-            familyWallet.contract.createFamily("familyName", [], window.web3.eth.coinbase, {from: window.web3.eth.coinbase}, (err, res) => {
+
+        getFamily("familyName")
+        .then((res) => {
+            console.log(res);
+        })
+
+        createFamilyWallet("familyNames"+Math.floor(Math.random() * 1000), ["ubuntusfd"+Math.floor(Math.random() * 1000)])
+            .then((res) => {
                 console.log(res);
             })
-        });
     }
     
     render() {
