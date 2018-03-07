@@ -14,24 +14,24 @@ class Form extends Component {
     
     submitForm() {
 
-        goals('0x3931e9f7ffd0a5a7b4204e115e2f40312a4129fd2fea1ec8ffed7325bc46f7ad')
+        goals("biometrics")
             .then((res) => {
-                console.log(res);
-                completeTask('0x3931e9f7ffd0a5a7b4204e115e2f40312a4129fd2fea1ec8ffed7325bc46f7ad', res[3].goal)
+                console.log(res[3].goal);
+                completeTask("biometrics", res[2].goal)
                     .then((err, res) => {
                         console.log(err, res);
                     })
             })
 
-        getFamily("familyName")
+        getFamily("Huxtables")
         .then((res) => {
             console.log(res);
         })
 
-        createFamilyWallet("familyName", ["ubuntusfd"+Math.floor(Math.random() * 1000)])
-            .then((res) => {
-                console.log(res);
-            })
+        // createFamilyWallet("familyName", ["ubuntusfd"+Math.floor(Math.random() * 1000)])
+        //     .then((res) => {
+        //         console.log(res);
+        //     })
     }
     
     render() {
