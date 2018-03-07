@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import $ from 'jquery';
 
+import getFamilyWallet from "../utils/getFamilyWallet.js";
+
 import personImg from '../images/person.png';
 import fingerPrintImg from '../images/fingerPrint.png';
 import eyeImg from '../images/eye.png';
@@ -10,7 +12,12 @@ import eyeImg from '../images/eye.png';
 class Form extends Component {
     
     submitForm() {
-        alert("submited!!!");
+        getFamilyWallet().then(contract => {
+            // console.log(contract);
+            contract.createFamily("familyName", [], window.web3.eth.coinbase, {from: window.web3.eth.coinbase}, (err, res) => {
+                console.log(res);
+            })
+        });
     }
     
     render() {

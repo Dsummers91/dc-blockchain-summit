@@ -8,6 +8,7 @@ import Form from './Form';
 import UNHCRTextImg from '../images/UNHCR_text.png';
 
 class UNHCR extends Component {
+
     componentDidMount() {
       $('html,body').animate({ scrollTop: 0 }, 'fast');
     }
