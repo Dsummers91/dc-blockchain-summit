@@ -7,6 +7,9 @@ import getWeb3 from './utils/getWeb3'
 import Home from './pages/Home';
 import UNHCR from './pages/UNHCR';
 
+import getFamilyWallet from './utils/getFamilyWallet';
+import getGoalTracker from './utils/getGoalTracker';
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -27,21 +30,14 @@ class App extends Component {
   }
 
   componentWillMount() {
-    // Get network provider and web3 instance.
-    // See utils/getWeb3 for more info.
-
-    getWeb3
-    .then(results => {
-      this.setState({
-        web3: results.web3
+    getFamilyWallet()
+      .then((wallet) => {
+        console.log(wallet);
       })
-
-      // Instantiate contract once web3 provided.
-      this.instantiateContract()
-    })
-    .catch(() => {
-      console.log('Error finding web3.')
-    })
+    getGoalTracker()
+      .then((tracker) => {
+        console.log(tracker);
+      })
   }
 
   instantiateContract() {
@@ -52,28 +48,28 @@ class App extends Component {
      * state management library, but for convenience I've placed them here.
      */
 
-    const contract = require('truffle-contract')
-    const FamilyWallet = contract(FamilyWalletContract)
-    FamilyWallet.setProvider(this.state.web3.currentProvider)
+    // const contract = require('truffle-contract')
+    // const FamilyWallet = contract(FamilyWalletContract)
+    // FamilyWallet.setProvider(this.state.web3.currentProvider)
 
-    // Declaring this for later so we can chain functions on FamilyWallet.
-    var FamilyWalletInstance
+    // // Declaring this for later so we can chain functions on FamilyWallet.
+    // var FamilyWalletInstance
 
-    // Get accounts.
-    this.state.web3.eth.getAccounts((error, accounts) => {
-      FamilyWallet.deployed().then((instance) => {
-        FamilyWalletInstance = instance
+    // // Get accounts.
+    // this.state.web3.eth.getAccounts((error, accounts) => {
+    //   FamilyWallet.deployed().then((instance) => {
+    //     FamilyWalletInstance = instance
 
-        // Stores a given value, 5 by default.
-        return FamilyWalletInstance.set(5, {from: accounts[0]})
-      }).then((result) => {
-        // Get the value from the contract to prove it worked.
-        return FamilyWalletInstance.get.call(accounts[0])
-      }).then((result) => {
-        // Update state with the result.
-        return this.setState({ storageValue: result.c[0] })
-      })
-    })
+    //     // Stores a given value, 5 by default.
+    //     return FamilyWalletInstance.set(5, {from: accounts[0]})
+    //   }).then((result) => {
+    //     // Get the value from the contract to prove it worked.
+    //     return FamilyWalletInstance.get.call(accounts[0])
+    //   }).then((result) => {
+    //     // Update state with the result.
+    //     return this.setState({ storageValue: result.c[0] })
+    //   })
+    // })
   }
 
   render() {
