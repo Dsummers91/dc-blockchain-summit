@@ -83,15 +83,15 @@ class Form extends Component {
                     <div className="row">
                         <div className="col s1 m1" />
                         <div className="col s3 m3">
-                            <div className="unhcr-diometric-text">Facial recognition</div>
+                            <div className="unhcr-diometric-text card depth-1">Facial recognition</div>
                             <img src={personImg} className="form-img-block" />
                         </div>
                         <div className="col s4 m4">
-                            <div className="unhcr-diometric-text">Fingerprint</div>
+                            <div className="unhcr-diometric-text card depth-1">Fingerprint</div>
                             <img src={fingerPrintImg} className="form-img-block" />
                         </div>
                         <div className="col s3 m3">
-                            <div className="unhcr-diometric-text">Iris / Retina Pattern</div>
+                            <div className="unhcr-diometric-text card depth-1">Iris / Retina Pattern</div>
                             <img src={eyeImg} className="form-img-block" />
                         </div>
                         <div className="col s1 m1" />
@@ -101,7 +101,7 @@ class Form extends Component {
                 <div className="row">
                     <div className="col s4 m4" />
                     <div className="col s4 m4">
-                        <a className="waves-effect waves-light btn light-blue lighten form-submit-btn" onClick={() => {this.submitForm()}}>Create Family Wallet</a>
+                        <a className="waves-effect waves-light btn light-blue form-submit-btn" onClick={() => {this.submitForm()}}>Create Family Wallet</a>
                     </div>
                     <div className="col s4 m4" />
                 </div>

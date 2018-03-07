@@ -1,0 +1,37 @@
+.phone-case-section {
+    margin-top: 0.5em;
+    width: 22em;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.phone-form-section {
+    margin-top: 1.5em;
+}
+.phone-login-section {
+    margin-top: -38em;
+    z-index: 10;
+}
+.phone-login-text {
+    color: #0099cc !important; 
+}
+.phone-finger-print {
+    width: 15em;
+}
+.phone-open-wallet {
+    margin-top: -1em;
+    width: 15em;
+    border-width: 0.1em;
+    border-color: #0099cc !important; 
+    cursor: pointer;
+}
+.phone-login-text {
+    margin: 0.7em;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em;
+    border-width: 0.1em;
+    border-style: dashed;
+    border-color: #0099cc !important; 
+}

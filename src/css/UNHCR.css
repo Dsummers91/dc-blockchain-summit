@@ -35,6 +35,7 @@
 .unhcr-diometric-text {
     color: #0099cc !important;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 .form-img-block {
     width: 12em;

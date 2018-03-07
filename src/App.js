@@ -6,6 +6,7 @@ import getWeb3 from './utils/getWeb3'
 
 import Home from './pages/Home';
 import UNHCR from './pages/UNHCR';
+import Phone from './pages/Phone';
 
 import getFamilyWallet from './utils/getFamilyWallet';
 import getGoalTracker from './utils/getGoalTracker';
@@ -25,6 +26,7 @@ class App extends Component {
     switch (this.props.match.url) {
       case "/": return( <Route path="/" component={ Home } />);
       case "/UNHCR": return( <Route path="/UNHCR" component={ UNHCR } />);
+      case "/user": return( <Route path="/user" component={ Phone } />);
       default: break;
     }
   }
