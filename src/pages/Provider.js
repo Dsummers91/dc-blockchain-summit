@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import $ from 'jquery';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { createFamilyWallet, getFamily } from "../utils/getFamilyWallet.js";
 import { goals, completeTask } from '../utils/getGoalTracker';
@@ -47,11 +48,21 @@ class Provider extends Component {
             .then((res) => {
                 console.log(res[3].goal);
                 completeTask("biometrics", res[2].goal)
-                    .then((err, res) => {
-                        console.log(err, res);
+                    .then((res) => {
+                        console.log(res);
+                        this.notify(res);
                     })
             })
     }
+    notify(inputObj) {
+        let hash = "txHash:" + inputObj;
+        toast.success("Successfully Approved Task!", {
+            position: toast.POSITION.TOP_CENTER
+        });
+        toast.info(hash, {
+            position: toast.POSITION.TOP_CENTER
+        });
+    };
     displayGoal() {
         if(this.state.face == true && this.state.finger == true && this.state.iris == true) {
             return(
@@ -68,7 +79,7 @@ class Provider extends Component {
                                 <div className="col s1 m1" />
                                 <div className="col s9 m9">
                                     <div className="provider-goal-text">
-                                    [HealthCare] Get a Checkup in March (Mother).
+                                    [HealthCare] Psychotherapy for PTSD.
                                     </div>
                                 </div>
                                 <div className="col s2 m2">
@@ -102,6 +113,7 @@ class Provider extends Component {
     render() {
         return (
             <div className="container provider-page-bg">
+                <ToastContainer autoClose={100000} />
                 <div className="row">
                     <div className="col s3 m3" />
                     <div className="col s6 m6">

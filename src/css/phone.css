@@ -35,3 +35,51 @@
     border-style: dashed;
     border-color: #0099cc !important; 
 }
+
+.phone-user-text {
+    font-size: 0.95em;
+    color: #0099cc !important; 
+    margin: 0.2em;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em;
+    border-width: 0.2em;
+    border-style: dashed;
+    border-color: #0099cc !important; 
+}
+.phone-user-text-address {
+    /* width: 10em; */
+    font-size: 0.75em;
+    margin-top: 0.35em;
+    margin-left: -3.3em;
+    color: #0099cc !important; 
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.phone-user-balance-head {
+    margin: 1em;
+    color: #0099cc !important; 
+}
+.phone-user-goal-text {
+    padding: 0.85em;
+    margin: 0.25em;
+    font-size: 0.95em;
+    color: #0099cc !important; 
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: #0099cc !important; 
+}
+.phone-user-goal-nope {
+    padding: 0.85em;
+    margin: 0.25em;
+    font-size: 0.95em;
+    color: #9fa2a3 !important; 
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: #9fa2a3 !important; 
+    opacity: 0.64;
+}
+.phone-text-color {
+    color: #0099cc !important; 
+}
