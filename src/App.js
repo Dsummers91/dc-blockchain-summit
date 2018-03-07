@@ -5,6 +5,7 @@ import FamilyWalletContract from '../build/contracts/FamilyWallet.json'
 import getWeb3 from './utils/getWeb3'
 
 import Home from './pages/Home';
+import UNHCR from './pages/UNHCR';
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class App extends Component {
   routeRender() {
     switch (this.props.match.url) {
       case "/": return( <Route path="/" component={ Home } />);
-      // case "/grant": return( <Route path="/grant" component={ Grant } />);
+      case "/UNHCR": return( <Route path="/UNHCR" component={ UNHCR } />);
       default: break;
     }
   }

@@ -13,9 +13,11 @@ WebFont.load({
 });
 
 import App from './App';
+import UNHCR from './pages/UNHCR';
 
 import './css/App.css';
 import './css/home.css';
+import './css/UNHCR.css';
 
 // CSS font
 import '../node_modules/font-awesome/css/font-awesome.min.css';
@@ -30,6 +32,7 @@ ReactDOM.render(
 
       <Switch>
         <Route exact path='/' component={ App } />
+        <Route exact path='/UNHCR' component={ UNHCR } />
       </Switch>
 
     </Router>

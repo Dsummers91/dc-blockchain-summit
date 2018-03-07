@@ -48,6 +48,7 @@
     border-width: 0.1em;
     border-style: solid;
     border-color: #0099cc !important; 
+    margin-bottom: 8em;
 }
 .home-nav-box-top {
     height: 2em;
@@ -58,16 +59,17 @@
 }
 
 .home-nav-img {
-    padding-top: 4em;
+    padding-top: 5em;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    padding-bottom: 2em;
     width: 10em;
 }
 .home-nav-text {
     color: #0099cc;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-top: 1em;
     padding-bottom: 1.5em;
 }

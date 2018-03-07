@@ -1,0 +1,49 @@
+.unhcr-img-block {
+    width: 20em;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.unhcr-img-section {
+    margin-top: 1.5em;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: #0099cc !important; 
+}
+.unhcr-form-main-text {
+    color: #0099cc !important; 
+    margin: 1.1em;
+}
+.unhcr-form-section {
+    height: 38em;
+    padding: 2em !important;
+    border-width: 0.1em;
+    border-style: dashed;
+    border-color: #0099cc !important; 
+}
+
+.unhcr-diometric-section {
+    height: 18em;
+    padding: 2em !important;
+    margin-bottom: 4em;
+    border-width: 0.1em;
+    border-style: dashed;
+    border-color: #0099cc !important;  
+}
+
+.unhcr-diometric-text {
+    color: #0099cc !important;
+    text-align: center;
+}
+.form-img-block {
+    width: 12em;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+}
+.form-submit-btn {
+    margin-top: 1em;
+    margin-bottom: 5em;
+}

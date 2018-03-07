@@ -16,7 +16,7 @@ class Home extends Component {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
   }
   scrollDown() {
-    $('html,body').animate({ scrollTop: 650 }, 'slow');
+    $('html,body').animate({ scrollTop: 700 }, 'slow');
   }
 
   render() {
@@ -51,7 +51,7 @@ class Home extends Component {
                   <div className="home-nav-card">
                     <div className="home-nav-box-top" />
                     <img src={UNHCRLogoImg} className="home-nav-img" />
-                      <div className="home-nav-text">UNHCR ID</div>
+                      <div className="home-nav-text">UNHCR LogIn</div>
                   </div>
                   </Link>
                 </div>

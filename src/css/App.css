@@ -6,6 +6,13 @@
 .clean-row {
   padding: 0em;
 }
+.input-field.col label {
+  top: -1.75rem;
+}
+input {
+  color: #6699cc !important;
+  opacity: 0.95;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
