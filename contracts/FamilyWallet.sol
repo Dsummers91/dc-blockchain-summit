@@ -3,7 +3,7 @@ pragma solidity ^0.4.18;
 contract FamilyWallet {
   mapping(address => bytes32) public familyOf;
   mapping(bytes32 => Family) families;
-  
+
   struct Family {
     address[] members;
     address headOfHousehold;
@@ -18,7 +18,6 @@ contract FamilyWallet {
     _family.members = _members;
     _family.headOfHousehold = _members[0];
   }
-
 
   function family(bytes32 _familyName) public view returns (address[], address) {
     Family memory _family = families[_familyName];
