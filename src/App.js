@@ -7,6 +7,7 @@ import getWeb3 from './utils/getWeb3'
 import Home from './pages/Home';
 import UNHCR from './pages/UNHCR';
 import Phone from './pages/Phone';
+import Provider from './pages/Provider';
 
 class App extends Component {
   constructor(props) {
@@ -22,8 +23,9 @@ class App extends Component {
   routeRender() {
     switch (this.props.match.url) {
       case "/": return( <Route path="/" component={ Home } />);
-      case "/UNHCR": return( <Route path="/UNHCR" component={ UNHCR } />);
+      case "/unhcr": return( <Route path="/unhcr" component={ UNHCR } />);
       case "/user": return( <Route path="/user" component={ Phone } />);
+      case "/provider": return( <Route path="/provider" component={ Provider } />);
       default: break;
     }
   }

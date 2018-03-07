@@ -1,0 +1,90 @@
+.provider-main-text {
+    color: #0099cc !important; 
+}
+
+.provider-main-text {
+    text-align: center;
+    font-size: 1.5em;
+}
+.provider-input-box {
+    margin-top: 2em;
+    cursor: pointer;
+    width: 8em;
+    height: 8em;
+    border-width: 0.1em;
+    border-style: dotted;
+    border-color: #0099cc !important; 
+}
+.provider-input-plus {
+    font-size: 8em;
+    line-height: 1em;
+    margin-left: 0.2em;
+    opacity: 0.45;
+    color: #0099cc !important; 
+}
+.provider-input-text {
+    margin-top: 4.1em;
+    margin-left: -1.6em;
+    font-size: 1.2em !important;
+    color: #0099cc !important; 
+}
+
+.provider-goal-section {
+    /* visibility: hidden; */
+}
+.provider-hash-text {
+    margin-top: 1.2em;
+    padding: 1em !important;
+    font-size: 1.25em;
+    display: block;
+    color: #0099cc !important;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: #0099cc !important; 
+}
+.provider-goal-block {
+    margin-top: 3em;
+    height: 8em;
+    color: #0099cc !important;
+    border-width: 0.1em;
+    border-style: dashed;
+    border-color: #0099cc !important; 
+}
+.provider-goal-text {
+    padding: 2.2em;
+    font-size: 1.25em;
+    display: block;
+    color: #0099cc !important;
+}
+.provider-check-box {
+    margin-top: 3.15em;
+}
+.provider-submit-btn {
+    margin-top: 2em;
+    margin-left: 3em;
+    margin-bottom: 5em;
+    text-align: center;
+    display: block;
+}
+
+.provider-click-face {
+    width: 10em;
+    position: absolute;
+    top: 33%;
+    left: 3.8%;
+    display: block;
+}
+.provider-click-finger {
+    width: 10em;
+    position: absolute;
+    top: 33%;
+    left: 34.2%;
+    display: block;
+}
+.provider-click-iris {
+    width: 10em;
+    position: absolute;
+    top: 33%;
+    left: 65%;
+    display: block;
+}

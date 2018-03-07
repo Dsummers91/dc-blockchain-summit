@@ -3,12 +3,22 @@ import { Link } from 'react-router-dom'
 
 import $ from 'jquery';
 
+import { createFamilyWallet, getFamily } from "../utils/getFamilyWallet.js";
+import { goals, completeTask } from '../utils/getGoalTracker';
+
 import phoneCaseImg from '../images/phoneCase.png';
 import fingerPrintImg from '../images/fingerPrintLogo.png';
 import openWalletImg from '../images/openWallet.png';
 
 class Phone extends Component {
     
+    componentDidMount() {
+        getFamily("Huxtables")
+        .then((res) => {
+            console.log(res);
+        })
+    }
+
     submitForm() {
         alert("submited!!!");
     }

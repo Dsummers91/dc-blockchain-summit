@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import $ from 'jquery';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { createFamilyWallet, getFamily } from "../utils/getFamilyWallet.js";
 import { goals, completeTask } from '../utils/getGoalTracker';
@@ -12,33 +13,57 @@ import eyeImg from '../images/eye.png';
 
 class Form extends Component {
     
-    submitForm() {
-
-        goals("biometrics")
-            .then((res) => {
-                console.log(res[3].goal);
-                completeTask("biometrics", res[2].goal)
-                    .then((err, res) => {
-                        console.log(err, res);
-                    })
-            })
-
-        getFamily("Huxtables")
-        .then((res) => {
-            console.log(res);
-        })
-
-        // createFamilyWallet("familyName", ["ubuntusfd"+Math.floor(Math.random() * 1000)])
-        //     .then((res) => {
-        //         console.log(res);
-        //     })
+    state = {
+        face: null,
+        finger: null,
+        iris: null
     }
+
+    clickFace() {this.setState({face: true}) };
+    clickFinger() {this.setState({finger: true}) };
+    clickIris() {this.setState({iris: true}) };
+
+    displayFace() {
+        if(this.state.face == true) {
+            return( <img src={personImg} className="form-img-block moveFromTopFade" /> );
+        }
+    }
+    displayFinger() {
+        if(this.state.finger == true) {
+            return( <img src={fingerPrintImg} className="form-img-block moveFromTopFade" /> );
+        }
+    }
+    displayIris() {
+        if(this.state.iris == true) {
+            return( <img src={eyeImg} className="form-img-block moveFromTopFade" /> );
+        }
+    }
+    submitForm() {
+        // hell0 Jonath0n =p
+        createFamilyWallet("familyName", ["ubuntusfd"+Math.floor(Math.random() * 1000)])
+            .then((res) => {
+                console.log(res);
+                this.notify(res);
+            })
+    }
+
+    notify(inputObj) {
+        let hash = "txHash:" + inputObj;
+        toast.success("Wallet Creation Successful!", {
+            position: toast.POSITION.TOP_CENTER
+        });
+        toast.info(hash, {
+            position: toast.POSITION.TOP_CENTER
+        });
+    };
+
     
     render() {
         return (
             <div>
+                <ToastContainer autoClose={100000} />
                 <h4 className="unhcr-form-main-text">Digital Identification Form</h4>
-                <form className="unhcr-form-section moveFromTopFade delay200">
+                <form className="unhcr-form-section moveFromBottomFade delay200">
                     <div className="row">
                         <div className="input-field col s6 m6">
                             <label htmlFor="first_name">First Name</label>
@@ -104,16 +129,16 @@ class Form extends Component {
                     <div className="row">
                         <div className="col s1 m1" />
                         <div className="col s3 m3">
-                            <div className="unhcr-diometric-text card depth-1">Facial recognition</div>
-                            <img src={personImg} className="form-img-block" />
+                            <div className="unhcr-diometric-text card depth-1" onClick={() => this.clickFace()}>Facial recognition</div>
+                            {this.displayFace()}
                         </div>
                         <div className="col s4 m4">
-                            <div className="unhcr-diometric-text card depth-1">Fingerprint</div>
-                            <img src={fingerPrintImg} className="form-img-block" />
+                            <div className="unhcr-diometric-text card depth-1" onClick={() => this.clickFinger()}>Fingerprint</div>
+                            {this.displayFinger()}
                         </div>
                         <div className="col s3 m3">
-                            <div className="unhcr-diometric-text card depth-1">Iris / Retina Pattern</div>
-                            <img src={eyeImg} className="form-img-block" />
+                            <div className="unhcr-diometric-text card depth-1" onClick={() => this.clickIris()}>Iris / Retina Pattern</div>
+                            {this.displayIris()}
                         </div>
                         <div className="col s1 m1" />
                     </div>

@@ -11,6 +11,59 @@
     border-style: solid;
     border-color: #0099cc !important; 
 }
+.unhcr-main-text {
+    margin: 1em;
+    font-size: 2em;
+    text-align: center;
+    color: #0099cc !important; 
+}
+.unhcr-input-text {
+    margin-top: 4.1em;
+    margin-left: -2.8em;
+    font-size: 1em !important;
+    color: #0099cc !important; 
+}
+.display-users-section {
+    margin-top: 1em;
+}
+.user-tag {
+    margin: 1em;
+    padding: 0.5em !important;
+    text-align: center;
+    color: #0099cc !important; 
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: #0099cc !important; 
+    cursor: pointer;
+}
+.user-tag-lite {
+    margin: 1em;
+    padding: 0.5em !important;
+    text-align: center;
+    color: #0099cc !important; 
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: #0099cc !important; 
+    cursor: pointer;
+    opacity: 0.25;
+}
+.unhcr-input-box {
+    margin-top: 2em;
+    cursor: pointer;
+    width: 6em;
+    height: 6em;
+    border-width: 0.1em;
+    border-style: dotted;
+    border-color: #0099cc !important; 
+}
+.unhcr-input-plus {
+    font-size: 6em;
+    line-height: 1em;
+    margin-left: 0.2em;
+    opacity: 0.45;
+    color: #0099cc !important; 
+}
+
 .unhcr-form-main-text {
     color: #0099cc !important; 
     margin: 1.1em;
