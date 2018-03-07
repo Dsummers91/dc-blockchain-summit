@@ -5,5 +5,9 @@ module.exports = function(deployer) {
   const gas = 81000
   const gasPrice = 1e4;
   let transferrableBalance = balance.minus(gas * gasPrice);
-  web3.eth.sendTransaction({from: web3.eth.accounts[9], to: GoalTracker.address, value: transferrableBalance, gas: gas, gasPrice: gasPrice});
-};
+  try {
+    web3.eth.sendTransaction({from: web3.eth.accounts[9], to: GoalTracker.address, value: transferrableBalance, gas: gas, gasPrice: gasPrice});
+  } catch (e) {
+    console.log('error handling heh');
+  }
+ };

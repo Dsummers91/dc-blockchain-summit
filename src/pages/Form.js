@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import $ from 'jquery';
 
 import { createFamilyWallet, getFamily } from "../utils/getFamilyWallet.js";
+import { goals, completeTask } from '../utils/getGoalTracker';
 
 import personImg from '../images/person.png';
 import fingerPrintImg from '../images/fingerPrint.png';
@@ -13,12 +14,21 @@ class Form extends Component {
     
     submitForm() {
 
+        goals('0x3931e9f7ffd0a5a7b4204e115e2f40312a4129fd2fea1ec8ffed7325bc46f7ad')
+            .then((res) => {
+                console.log(res);
+                completeTask('0x3931e9f7ffd0a5a7b4204e115e2f40312a4129fd2fea1ec8ffed7325bc46f7ad', res[3].goal)
+                    .then((err, res) => {
+                        console.log(err, res);
+                    })
+            })
+
         getFamily("familyName")
         .then((res) => {
             console.log(res);
         })
 
-        createFamilyWallet("familyNames"+Math.floor(Math.random() * 1000), ["ubuntusfd"+Math.floor(Math.random() * 1000)])
+        createFamilyWallet("familyName", ["ubuntusfd"+Math.floor(Math.random() * 1000)])
             .then((res) => {
                 console.log(res);
             })

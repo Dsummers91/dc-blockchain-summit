@@ -32,8 +32,11 @@ module.exports.getFamily = (familyName) => {
     return getContract()
       .then((familyWallet) => {
         return familyWallet.contract.family(familyName, {from: window.web3.eth.coinbase}, (err, res) => {
-          if(err) reject(err);
-          resolve(res)
+          if(err) reject(err);          
+          resolve({
+            members: res[0].map(member => window.web3.toUtf8(member)),
+            headOfHouseholdAddress: res[1]
+          })
         })
       })
   })
