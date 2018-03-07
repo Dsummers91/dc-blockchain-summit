@@ -12,9 +12,8 @@ import eyeImg from '../images/eye.png';
 class Form extends Component {
     
     submitForm() {
-        getFamilyWallet().then(contract => {
-            // console.log(contract);
-            contract.createFamily("familyName", [], window.web3.eth.coinbase, {from: window.web3.eth.coinbase}, (err, res) => {
+        getFamilyWallet().then((familyWallet) => {
+            familyWallet.contract.createFamily("familyName", [], window.web3.eth.coinbase, {from: window.web3.eth.coinbase}, (err, res) => {
                 console.log(res);
             })
         });

@@ -12,7 +12,7 @@ npm isntall
 
 # Running
 ```
-ganache-cli -m "keen employ fall exact penalty veteran occur arrest actress rookie enemy gown"
+ganache-cli -m "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
 ```
 
 ```
@@ -21,7 +21,7 @@ npm start
 ```
 
 make sure metamask is pointed to localhost:8545, 
-and use `keen employ fall exact penalty veteran occur arrest actress rookie enemy gown` mnemonic
+and use `candy maple cake sugar pudding cream honey rich smooth crumble sweet treat` mnemonic
 
 # Running Test
 only works on Mac/Linux
