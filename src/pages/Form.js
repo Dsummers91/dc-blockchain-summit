@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 import $ from 'jquery';
 import { ToastContainer, toast } from 'react-toastify';
@@ -12,12 +12,13 @@ import fingerPrintImg from '../images/fingerPrint.png';
 import eyeImg from '../images/eye.png';
 
 class Form extends Component {
-    
-    state = {
-        face: null,
-        finger: null,
-        iris: null
+    constructor(props) {
+        super(props);
+        // console.log(this.props)
     }
+
+    // state = {face: null,finger: null,iris: null}
+    state = {face: true,finger: true,iris: true}
 
     clickFace() {this.setState({face: true}) };
     clickFinger() {this.setState({finger: true}) };
@@ -44,7 +45,8 @@ class Form extends Component {
             .then((res) => {
                 console.log(res);
                 this.notify(res);
-            })
+        });
+        this.props.routeHome()
     }
 
     notify(inputObj) {

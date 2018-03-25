@@ -12,7 +12,7 @@ import Provider from './pages/Provider';
 class App extends Component {
   constructor(props) {
     super(props)
-
+  
     this.state = {
       storageValue: 0,
       web3: null
@@ -21,16 +21,14 @@ class App extends Component {
 
   // console.log(this.props.match.url);
   routeRender() {
+    console.log(this.props)
     switch (this.props.match.url) {
       case "/": return( <Route path="/" component={ Home } />);
-      case "/unhcr": return( <Route path="/unhcr" component={ UNHCR } />);
+      case "/unhcr": return( <Route path="/unhcr" component={ UNHCR } history={this.props.history} />);
       case "/user": return( <Route path="/user" component={ Phone } />);
       case "/provider": return( <Route path="/provider" component={ Provider } />);
       default: break;
     }
-  }
-
-  componentWillMount() {
   }
 
   instantiateContract() {

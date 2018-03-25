@@ -14,6 +14,7 @@ class UNHCR extends Component {
     }
 
     componentDidMount() {
+        // console.log(this.props)
       $('html,body').animate({ scrollTop: 0 }, 'fast');
     }
     clickUsers() { this.setState({demoClicked: true}) };
@@ -34,15 +35,20 @@ class UNHCR extends Component {
            ) 
         }
     }
+    
+    routeHome() {
+        this.props.history.push("/");
+    }
     displayForm() {
         if(this.state.formClicked == true) {
             return(     
                 <div>
-                    <Form />
+                    <Form routeHome={() =>this.routeHome()} />
                 </div>       
             ) 
          }
     }
+
 
     render() {
         return (
